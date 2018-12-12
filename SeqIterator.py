@@ -45,7 +45,7 @@ class SeqReader:
     def __next__(self):
         return next(self)
 
-    def next(self):
+    def __next__(self):
         if self.type == 0:  # FASTA
             seq_id = self.next_line
             seq_seq = self.seq_file.readline()

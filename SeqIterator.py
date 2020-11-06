@@ -29,7 +29,7 @@ class SeqReader:
             except OSError:
                 gzip_switch = False
         if gzip_switch:
-            self.seq_file = gzip.open(file_name)
+            self.seq_file = gzip.open(file_name, 'rt')
         else:
             self.seq_file = open(file_name, 'r')
         self.next_line = self.seq_file.readline()
